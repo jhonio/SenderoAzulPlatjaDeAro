@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* CSS Document */
+.ui-icon-earth {
+	background-image:url(../jquery/images/earth.png);
+	background-repeat:no-repeat;
+	rgba(0, 0, 0, 0.4) !important;
+}
+.ui-icon-list {
+	background-image:url(../jquery/images/list.png);
+	background-repeat:no-repeat;
+	rgba(0, 0, 0, 0.4) !important;
+}
+.ui-icon-plant {
+	background-image:url(../jquery/images/plant.png);
+	background-repeat:no-repeat;
+	rgba(0, 0, 0, 0.4) !important;
+}
+.ui-icon-about {
+	background-image:url(../jquery/images/about.png);
+	background-repeat:no-repeat;
+	rgba(0, 0, 0, 0.4) !important;
+}
+.ui-icon-casette {
+	background-image:url(../jquery/images/casette.png);
+	background-repeat:no-repeat;
+	rgba(0, 0, 0, 0.4) !important;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	// declarations go here
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-earth {
+		background: url(../jquery/images/earth@2x.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+		background-size: 18px 18px;
+	}	
+		.ui-icon-list {
+		background: url(../jquery/images/list@2x.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+		background-size: 18px 18px;
+	}	
+		.ui-icon-plant {
+		background: url(../jquery/images/plant@2x.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+		background-size: 18px 18px;
+	}
+		.ui-icon-about {
+		background: url(../jquery/images/about@2x.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+		background-size: 18px 18px;
+	}
+
+		.ui-icon-casette {
+		background: url(../jquery/images/casette@2x.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+		background-size: 18px 18px;
+	}		
+}

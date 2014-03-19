@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Senderos Azules</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+	<link href="jquery/jquery.mobile-1.3.2.min.css" rel="stylesheet"/>
+    <script src="js/jquery-1.10.2.min.js"></script>
+	<script src="jquery/jquery.mobile-1.3.2.min.js"></script>
+    
+    <link href="swipeshow-master/jquery.swipeshow.css" rel="stylesheet" />
+    <link href="swipeshow-master/slideshow-theme.css" rel="stylesheet" />
+    <script src="swipeshow-master/jquery.swipeshow.min.js"></script>
+    <link href='css/icons.css' rel='stylesheet' />
+     
+    <script>
+ $(function() {
+  $(".slideshow").swipeshow();
+});
+    </script>   
+<style type="text/css">
+.main {
+height: inherit;
+width: 100%;
+background-color:#fff ;
+border-width: 1px;
+border-style: solid;
+border-color: #2489ce;
+-webkit-border-radius: 20px 0px 20px 0px;
+-moz-border-radius: 20px 0px 20px 0px;
+-o-border-radius: 20px 0px 20px 0px;
+-ms-border-radius: 20px 0px 20px 0px;
+border-radius: 20px 0px 20px 0px;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+-o-box-sizing: content-box;
+-ms-box-sizing: content-box;
+box-sizing: content-box;
+text-align: center;
+color:#2489ce; 
+}
+.main2 {
+height: inherit;
+width: inherit;
+background-color:#2489ce ;
+border-width: 1px;
+border-style: solid;
+border-color: #2489ce; /* or hex color code #000000 */
+-webkit-border-radius: 20px 0px 20px 0px;
+-moz-border-radius: 20px 0px 20px 0px;
+-o-border-radius: 20px 0px 20px 0px;
+-ms-border-radius: 20px 0px 20px 0px;
+border-radius: 20px 0px 20px 0px;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+-o-box-sizing: content-box;
+-ms-box-sizing: content-box;
+box-sizing: content-box;
+text-align:justify;
+color:#fff;
+text-shadow:none; 
+padding-left: 20px;
+padding-right: 20px;
+
+}
+.main3{
+height: inherit;
+width: inherit;
+background-color:#009933; 
+
+border-width: 1px;
+border-style: solid;
+border-color: #009933; 
+
+-webkit-border-radius: 20px 0px 20px 0px;
+-moz-border-radius: 20px 0px 20px 0px;
+-o-border-radius: 20px 0px 20px 0px;
+-ms-border-radius: 20px 0px 20px 0px;
+border-radius: 20px 0px 20px 0px;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+-o-box-sizing: content-box;
+-ms-box-sizing: content-box;
+box-sizing: content-box;  
+text-align:justify;
+color:#fff;
+text-shadow:none; 
+padding-left: 20px;
+padding-right: 20px;	
+}	
+.slideshow {
+  width: 100%;
+  height: 400px;
+  }
+/* ... */
+.slides img {
+  width: 100%;
+  height: 100%;
+}
+
+</style>	
+</head>
+<body>
+	
+<!--hito 2 Castell-->
+<div data-role="page" id="2castellEs" data-theme="d">  
+    
+  <!-- cabecera-->
+    <div data-role="header" data-position="fixed" data-theme="b">
+    <a href="hito1EN.html" rel="external" data-role="button" data-icon="arrow-l" data data-iconpos="notext" data-theme="a" data-inline="true">Atrás</a>
+      <h1>Castell-Platja d'Aro</h1>
+    <a href="hito3EN.html" rel="external" data-role="button" data-icon="arrow-r" data data-iconpos="notext" data-theme="a" data-inline="true">Siguiente</a>
+  	</div> <!--/cabecera-->
+  <!--contenido-->
+   <div data-role="content" data-theme="c">
+   	<div class="container">
+   		<section class="main">
+        	<h1>Racó de S’Agaró Beach</h1>
+    	</section>
+   		 	</br>
+    	<section class="main2">
+         <h4><p>The beach, El Racó de S'Agaró, is situated at the northern end of Sant Pol beach. It is an area that lies in a small shallow bay and has the only sandy beach in the municipality of Castell-Platja d’Aro.</p></h4>
+   		</section>
+        </br> 
+  <div class="slideshow swipeshow">
+   <ul class="slides">
+      <li class="slide">
+        <img src="images/00055_10_DSC_7683.jpg" alt=""/>
+      </li>
+    </ul>
+    <div class='dots'></div>
+  </div>
+
+  </br>
+   <section class="main3">
+   
+    <h4><p>It takes its name from the "Segueró" stream that creates a natural boundary between the municipalities of Castell-Platja d’Aro and Sant Feliu de Guíxols. In the past, the entire beach was known as Sant Pol. However, with the start of tourism in the area, to avoid confusion with the village of Sant Pol de Mar in the county of Maresme, it was decided that the beach should be named after the stream, adopting the salat article, “Sa”, as used by local fishermen. From that moment the local urbanised area was called S'Agaró, and the stretch of beach that lies in front of it became known as Platja del Racó de S'Agaró.</p></h4>
+   
+    </section>
+  
+  </div><!--container-->
+</div><!--content-->      
+
+                    <!-- /pie-->
+  <div data-role="footer" data-position="fixed" data-theme="b">   
+
+    <div data-role="navbar">
+        <ul>
+        <li><a href="index.html" rel="external" data-theme="b" data-inline="true" data-theme="b" data-icon="home">Home</a></li>
+            <li><a href="sampleMapEn.html" rel="external" data-theme="b" data-inline="true" class="ui-btn-active" data-theme="b" data-icon="earth">Map</a></li>
+        <li><a href="lista.html#hitosListEnglish" rel="external" data-inline="true" data-theme="b" data-icon="list">List of Milestones</a></li>
+        </ul>
+    </div><!-- /navbar -->
+
+  </div><!-- /pie-->
+
+</div><!--hito 2 Castell-->
+
+
+</body>
+</html>

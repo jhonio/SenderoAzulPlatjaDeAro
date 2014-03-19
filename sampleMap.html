@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <link href="jquery/jquery.mobile-1.3.2.min.css" rel="stylesheet"/>
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="jquery/jquery.mobile-1.3.2.min.js"></script>
+  <script src='scripts/mapbox.js'></script>
+  <link href='css/mapbox.css' rel='stylesheet' />
+  <link href='css/icons.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<!--Header-->
+  	<div data-role="header" data-position="fixed" data-theme="b">
+    <h1>Castell-Platja d'Aro</h1>
+    <a href="index.html#portada" rel="external" data-role="button" data-icon="home" data data-iconpos="notext" data-theme="a" data-inline="true">Home</a>
+  	</div><!--/Header-->
+
+<div id='map'></div>
+	<!--Footer-->          
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    
+          <div data-role="navbar">
+          <ul> 
+            <li><a href="lista.html#hitosListEspanol" rel="external" data-inline="true" data-theme="b" data-icon="list">Lista de Hitos</a></li> 
+          </ul>
+          </div>        
+    </div><!--/Footer-->
+<script>
+var map = L.mapbox.map('map', 'senderoazul.g8pm87hp').setView([41.79047281522011,3.05419921875],15);
+var geoJson = {
+    type: 'FeatureCollection',
+    features: [{
+        type: 'Feature',
+        properties: {
+            title: 'Playa Bandera Azul Sa Conca',
+			"marker-color": "#0066cc",
+			'marker-size': 'small',
+			"marker-symbol": "embassy",
+			url: 'hito8ES.html'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.0607223510742188,41.79755178601651]
+        }
+    },
+	{
+        type: 'Feature',
+        properties: {
+            title: 'Camino de Ronda de S’Agaró',
+			"marker-color": "#009933",
+			'marker-size': 'small',
+			url: 'hito1ES.html'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.05419921875,41.79047281522011]
+        }
+    },
+    {
+        type: 'Feature',
+        properties: {
+            title: 'Playa del Racó de S’Agaró',
+			"marker-color": "#009933",	
+			'marker-size': 'small',
+			url: 'hito2ES.html'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.0542356269836546,41.79031200777321]
+        }
+	
+    },
+	{
+        type: 'Feature',
+        properties: {
+            title: 'Punta d’en Pau',
+			"marker-color": "#009933",
+			'marker-size': 'small',
+			url: 'hito3ES.html'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.055222679901135,41.787472193787025]
+        }
+    },
+	{
+        type: 'Feature',
+        properties: {
+            title: 'Senya Blanca',
+			"marker-color": "#009933",
+			'marker-size': 'small',
+			url: 'hito4ES.html'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.0559790628433348,41.789112101717926]
+        }
+    },
+	{
+        type: 'Feature',
+        properties: {
+            title: 'Cala Pedrosa',
+			"marker-color": "#009933",
+			'marker-size': 'small',
+			url: 'hito5ES.html'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.0576903121948362,41.79126391726688]
+        }
+    },
+	{
+        type: 'Feature',
+        properties: {
+            title: 'Plaza del Mirador',
+			"marker-color": "#009933",
+			'marker-size': 'small',
+			url: 'hito6ES.html'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.0594283836364866,41.792567770354154]
+        }
+    },
+	{
+        type: 'Feature',
+        properties: {
+            title: 'Cala Vaques',
+			"marker-color": "#009933",
+			'marker-size': 'small',
+			url: 'hito7ES.html'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.059964825439465,41.79408756563096]
+        }
+    }]
+};
+map.markerLayer.setGeoJSON(geoJson);
+map.markerLayer.on('click', function(e) {
+    e.layer.unbindPopup();
+    window.open(e.layer.feature.properties.url);
+});
+map.markerLayer.on('mouseover', function(e) {
+    e.layer.openPopup();
+});
+map.markerLayer.on('mouseout', function(e) {
+    e.layer.closePopup();
+});
+L.mapbox.markerLayer({
+    // this feature is in the GeoJSON format: see geojson.org
+        type: 'Feature',
+        properties: {
+            title: '<center>S.O.S</center>',
+			"marker-color": "#ff0000",
+			"marker-symbol": "hospital",
+			'marker-size': 'small',	
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.060799999999972,41.7978]
+        }  
+}).addTo(map);
+L.mapbox.markerLayer({
+        type: 'Feature',
+        properties: {
+            title: '<center>WC</center>',
+			"marker-color": "#ffc84e",
+			"marker-symbol": "toilets",
+			'marker-size': 'small',
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.0592925985336024,41.797558159618895]
+        }
+}).addTo(map);
+L.mapbox.markerLayer({
+        type: 'Feature',
+        properties: {
+            title: 'Información turística',
+			"marker-color": "#ff00da",
+			'marker-size': 'small',
+			"marker-symbol": "i",
+			
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [0.7295772361755371, 40.879175361675294]
+        }
+    
+}).addTo(map);
+L.mapbox.markerLayer({
+        type: 'Feature',
+        properties: {
+            title: 'Acceso adaptado',
+			"marker-color": "#ff793d",
+			'marker-size': 'small',
+			"marker-symbol": "disability",
+			
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.0566388862609983,41.790503990657776]
+        }
+}).addTo(map);
+L.mapbox.markerLayer({
+        type: 'Feature',
+        properties: {
+            title: 'Agua potable',
+			"marker-color": "#78eaff",
+			'marker-size': 'small',
+			"marker-symbol": "marker-stroked",
+			
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [3.059240629005444,41.79251577672035]
+        }
+}).addTo(map);
+</script>
+
+
+</body>
+</html>
