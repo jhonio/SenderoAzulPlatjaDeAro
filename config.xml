@@ -3,16 +3,16 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.senderosazules"
+        id        = "com.phonegap.SAPlatjadAro"
         version   = "1.0.0">
 
-    <name>Sendero Azul Platja d' Aro</name>
+    <name>Sendero Azul de Platja d'Aro</name>
 
     <description>
         Aplicación de los Senderos Azules de ADEAC.
     </description>
 
-    <author href="http://adeac.es" email="info@senderosazules.org">
+    <author href="http://senderosazules.org" email="info@senderosazules.org">
         PhoneGap Team
     </author>
 
@@ -74,10 +74,11 @@
 
         Otherwise, you can specify specific domains:
     -->
-    <access origin="*"/> <!-- allow local pages -->
+    <access origin="*"/>
+     
     <!--
         <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
-        <access origin="http://phonegap.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/
+        <access origin="https://soundcloud.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/
     -->
 
 </widget>
